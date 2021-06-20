@@ -858,9 +858,7 @@ button,
       padding: 30.5% 25.5% 0;
       background-color: #2c39f2;
       -webkit-animation: slideBack 1s linear forwards;
-              animation: slideBack 1s linear forwards;
-      -webkit-transition: 0.3s ease;
-      transition: 0.3s ease; }
+              animation: slideBack 1s linear forwards; }
     @-webkit-keyframes slideBack {
       0% {
         left: 0; }
@@ -874,9 +872,7 @@ button,
       .main__color-block--background-color {
         left: 0;
         -webkit-animation: slide 1s linear forwards;
-                animation: slide 1s linear forwards;
-        -webkit-transition: 0.3s ease;
-        transition: 0.3s ease; }
+                animation: slide 1s linear forwards; }
     @-webkit-keyframes slide {
       0% {
         left: -100vw; }

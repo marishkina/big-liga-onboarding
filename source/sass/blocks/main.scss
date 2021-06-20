@@ -109,13 +109,11 @@
     padding: 30.5% 25.5% 0;
     background-color: $color-neon-blue;
     animation: slideBack 1s linear forwards;
-    transition: $default-transition-settings;
 
     &--background-color {
       @include keyframes-slide;
       left: 0;
       animation: slide 1s linear forwards;
-      transition: $default-transition-settings;
     }
   }
 }

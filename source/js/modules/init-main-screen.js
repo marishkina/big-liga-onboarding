@@ -5,7 +5,6 @@ const initMainScreen = () => {
   const link = preloader.querySelector('.preloader__loader');
   const main = document.querySelector('.main');
   const headerLink = document.querySelector('.header__logo');
-  const mainBlock = main.querySelector('.main__block');
   const color = document.querySelector('.main__color-block');
 
   const setAnimation = () => {
