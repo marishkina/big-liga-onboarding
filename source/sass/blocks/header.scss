@@ -1,3 +1,35 @@
 .header {
-  display: block;
+  @include keyframes-fadeOut;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $color-default-white;
+  z-index: 2;
+  animation: fadeOut 4s 0.7s linear forwards;
+}
+
+.header__wrapper {
+  display: flex;
+  padding: 25px 35px;
+}
+
+.header__logo {
+  font-size: 0;
+  line-height: 0;
+  outline: none;
+  transition: $default-transition-settings;
+
+  svg {
+    width: 192px;
+    height: 24px;
+    pointer-events: none;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: $hover-focus-opacity;
+    }
+  }
 }

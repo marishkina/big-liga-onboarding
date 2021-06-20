@@ -6,6 +6,7 @@
   min-height: 100vh;
   min-height: calc(100 * var(--vh, 1vh));
   overflow-x: hidden;
+  background-color: $color-default-white;
 
   &--no-scrollbar {
     height: 100vh;

@@ -30,28 +30,93 @@
   }
 }
 
-// Mobile first
+@mixin keyframes-fadeOut {
+  @keyframes fadeOut {
+    0% {
+      opacity: 0;
+    }
 
-/* @mixin viewport--md {
-  @media (min-width: $viewport--md) {
-    @content;
+    100% {
+      opacity: 1;
+    }
   }
 }
 
-@mixin viewport--lg {
-  @media (min-width: $viewport--lg) {
-    @content;
+@mixin keyframes-fadeIn {
+  @keyframes fadeIn {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
   }
 }
 
-@mixin viewport--xl {
-  @media (min-width: $viewport--xl) {
-    @content;
+@mixin keyframes-shake {
+  @keyframes shake {
+    0% {
+      transform: translateY(-50vh);
+      opacity: 0.8;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateY(-1px);
+    }
+
+    20%,
+    40%,
+    60%,
+    85% {
+      transform: translateY(1px);
+    }
   }
 }
 
-@mixin viewport--xxl {
-  @media (min-width: $viewport--xxl) {
-    @content;
+@mixin keyframes-disappear {
+  @keyframes disappear {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(-100vh);
+    }
   }
-} */
+}
+
+@mixin keyframes-slide {
+  @keyframes slide {
+    0% {
+      left: -100vw;
+    }
+
+    100% {
+      left: 0;
+    }
+  }
+}
+
+@mixin keyframes-slideBack {
+  @keyframes slideBack {
+    0% {
+      left: 0;
+    }
+
+    100% {
+      left: -100vw;
+    }
+  }
+}

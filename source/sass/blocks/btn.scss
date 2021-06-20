@@ -1,0 +1,18 @@
+.btn {
+  font-family: $font-family--neue-machina;
+  font-size: 24px;
+  line-height: 22px;
+  font-weight: 400;
+  background-color: $color-transparent;
+  outline: none;
+  border: none;
+  transition: opacity $default-transition-settings;
+  cursor: pointer;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: $hover-focus-opacity;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.main {
+  @include keyframes-fadeOut;
+  position: relative;
+  opacity: 0;
+  animation: fadeOut 4s 0.7s linear forwards;
+
+  @include viewport--md {
+    transform: translateY(13.5vh);
+  }
+}
+
+.main__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4vw;
+  padding-top: 11.6vw;
+  padding-bottom: 18.8vw;
+
+  @include viewport--md {
+    display: block;
+  }
+}
+
+.main__block {
+  @include viewport--md {
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    width: 53%;
+    margin: 0 auto;
+    transform: translateY(0.5vh);
+  }
+
+  &.is-active {
+    left: 0;
+  }
+}
+
+.main__block-img {
+  width: 90%;
+  height: auto;
+  margin-bottom: 7.5%;
+
+  @include viewport--md {
+    width: 84%;
+  }
+}
+
+
+.main__title {
+  margin: 0;
+  margin-top: 13%;
+  padding: 0;
+  font-size: 96px;
+  line-height: 96px;
+  font-weight: 400;
+  color: $color-neon-blue;
+
+  @include viewport--md {
+    font-size: calc((100vw - 320px) / (768 - 320) * (96 - 40) + 40px);
+    line-height: calc((100vw - 320px) / (768 - 320) * (96 - 40) + 40px);
+  }
+}
+
+.main__text {
+  margin: 0;
+  font-size: 22px;
+  line-height: 30px;
+  color: $color-default-black;
+
+  @include viewport--md {
+    padding-left: 2.5%;
+    font-size: calc((100vw - 320px) / (768 - 320) * (30 - 12) + 12px);
+    line-height: calc((100vw - 320px) / (768 - 320) * (40 - 16) + 16px);
+    color: $color-default-white;
+  }
+}
+
+.main__img {
+  svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 65vw;
+    max-width: 664px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @include viewport--md {
+    display: none;
+  }
+}
+
+.main__color-block {
+  display: none;
+
+  @include viewport--md {
+    @include keyframes-slideBack;
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 30.5% 25.5% 0;
+    background-color: $color-neon-blue;
+    animation: slideBack 1s linear forwards;
+    transition: $default-transition-settings;
+
+    &--background-color {
+      @include keyframes-slide;
+      left: 0;
+      animation: slide 1s linear forwards;
+      transition: $default-transition-settings;
+    }
+  }
+}

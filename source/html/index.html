@@ -8,19 +8,33 @@
 </head>
 <body>
 
-  <div style="display: none;">
-    @@include("build/img/sprite_auto.svg")
-  </div>
-
   <div class="wrapper">
     @@include("source/html/base/header.html")
 
     <main>
-      <div class="container">
+      @@include("source/html/components/preloader.html")
+
+      <div class="main container">
+        <div class="main__content">
+          <h1 class="main__title">Вёрстка и фронтенд любой сложности</h1>
+          <div class="main__block">
+            <div class="main__block-img">
+              @@include("source/img/svg/dino.svg")
+            </div>
+            <p class="main__text">для digital&#8209;агентств, продуктовых компаний и фриланс&#8209;команд</p>
+          </div>
+        </div>
+      </div>
+      <div class="main__img">
+        @@include("source/img/svg/big-letter.svg")
+      </div>
+      <div class="main__color-block">
+        <div class="main__block-img">
+          @@include("source/img/svg/dino-white.svg")
+        </div>
+        <p class="main__text">для digital&#8209;агентств, продуктовых компаний и фриланс&#8209;команд</p>
       </div>
     </main>
-
-    @@include("source/html/base/footer.html")
   </div>
 
   <script src="js/vendor.min.js"></script>
